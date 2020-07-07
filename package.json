@@ -1,0 +1,18 @@
+{
+  "name": "venge-bot",
+  "version": "1.0.0",
+  "description": "venge discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "author": "hitthemoney",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "msgpack-lite": "^0.1.26",
+    "node-fetch": "^2.6.0",
+    "ws": "^7.3.1"
+  }
+}
