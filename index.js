@@ -40,6 +40,7 @@ bot.on("message", message => {
                         '> *findgame* - gets leaderboard info',
                         "> *leaderboard <daily or dailyscore> <player name>* - gets players daily stats"
                     ])
+                    .addField("Version", "1.0.0")
                     .addField("Invite Link", "[Click Here!](https://discord.com/api/oauth2/authorize?client_id=728780263135510538&permissions=2147483639&scope=bot)")
                 message.channel.send(embed)
                 break;
