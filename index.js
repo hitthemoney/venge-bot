@@ -45,8 +45,8 @@ bot.on("message", message => {
                     .addField("Commands", [
                         '> *help/stats* - this command',
                         '> *game <game id>* - gets game info',
-                        '> *leaderboard <daily or dailyscore>* - finds a match',
-                        '> *findgame* - gets leaderboard info',
+                        '> *findgame* - finds a match',
+                        '> *leaderboard <daily or dailyscore>* - gets leaderboard info',
                         "> *leaderboard <daily or dailyscore> <player name>* - gets players daily stats"
                     ])
                     .addField("Version", "1.0.0")
