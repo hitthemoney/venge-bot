@@ -19,6 +19,13 @@ var PREFIX = "v!";
 
 bot.on("ready", () => {
     console.log("The bot is online!");
+    bot.user.setPresence({
+        activity: {
+            name: "v!help"
+        },
+        status: "idle"
+    }).catch(console.error);
+    //.then(console.log)
 })
 
 bot.on("message", message => {
@@ -29,18 +36,22 @@ bot.on("message", message => {
         switch (args[0].toLowerCase()) {
             case "help":
             case "h":
+            case "stats":
+            case "s":
                 var embed = new Discord.MessageEmbed()
-                    .setTitle("Help")
+                    .setTitle("Bot Help and Stats")
                     .setColor("#a834eb")
                     .addField("Prefix", "v!")
                     .addField("Commands", [
-                        '> *help* - this command',
+                        '> *help/stats* - this command',
                         '> *game <game id>* - gets game info',
                         '> *leaderboard <daily or dailyscore>* - finds a match',
                         '> *findgame* - gets leaderboard info',
                         "> *leaderboard <daily or dailyscore> <player name>* - gets players daily stats"
                     ])
                     .addField("Version", "1.0.0")
+                    .addField("Servers", bot.guilds.cache.size)
+                    .addField("Users", bot.users.cache.size)
                     .addField("Invite Link", "[Click Here!](https://discord.com/api/oauth2/authorize?client_id=728780263135510538&permissions=2147483639&scope=bot)")
                 message.channel.send(embed)
                 break;
